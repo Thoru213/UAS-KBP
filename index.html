@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podomoro Timer</title>
+    <link rel="stylesheet" href="src/podomoro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Timer Section -->
+    <div class="timer-section">
+        <h1>Podomoro Timer</h1>
+        <div class="timer" style="color:white">
+            <span id="minutes">10</span>:<span id="seconds">00</span>
+        </div>
+        <div class="timer-controls">
+            <select id="timer-type">
+                <option value="study">⏰Study</option>
+                <option value="break">🛋️Sleep</option>
+            </select>
+            <input type="number" id="custom-time" placeholder="⏱️" min="0">
+            <button id="toggle-timer"><i class="bi bi-play-circle"></i></button>
+            <button id="reset-timer"><i class="bi bi-arrow-clockwise"></i></button>
+        </div>
+        <div class="hidden waktu-habis waktu-habis-left">
+            <img src="src/meledak.gif">
+            <p>Waktu habis!!</p>
+            <p>Silahkan merefresh halaman</p>
+        </div>
+        <div class="hidden waktu-habis waktu-habis-right">
+            <img src="src/meledak.gif">
+            <p>Waktu habis!!</p>
+            <p>Silahkan merefresh halaman</p>
+        </div>
+    </div>
+    <div class="bottom-section">
+        <!-- Spotify Section -->
+        <div class="spotify-section">
+            <h2>Spotify</h2>
+            <iframe style="border: radius 10px" src="https://open.spotify.com/embed/album/3Gt7rOjcZQoHCfnKl5AkK7?utm_source=generator&theme=0" width="100%" height="415" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <!-- To-Do List Section -->
+        <div class="todo-section">
+            <h2>To Do List</h2>
+            <div class="todo-input">
+                <input type="text" id="todo-input" placeholder="Tambah tugas baru">
+                <button id="add-todo"><i class="bi bi-plus-circle"></i></button>
+            </div>
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+
+    <script src="src/podomoro.js"></script>
+</body>
+</html>

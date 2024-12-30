@@ -1,0 +1,246 @@
+body {
+    background: linear-gradient(135deg, #1a1d23, #0f131a); /* Gradasi warna gelap */
+    color: #fafafa; /* Warna teks tetap putih untuk kontras */
+    margin: 0;
+    padding: 0;
+}
+
+/* Bottom Section (Spotify and To-Do List) */
+.bottom-section {
+    display: flex;
+    flex: 1;
+    gap: 1px;
+}
+
+/* Sidebar for Spotify */
+.spotify-section {
+    flex: 1;
+    background-color: #0f131a; /* abu2 gelap */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 3;
+}
+
+.spotify-section h2 {
+    margin-bottom: 1px;
+    text-align: center;
+    color: #fafafa; /* font menjadi putih */
+    text-shadow: 2px 2px 2px #000000; /* outline hitam sebesar 2px */
+}
+
+.spotify-section iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* To-Do List Section */
+.todo-section {
+    flex: 1.5;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0f131a; /* abu2 gelap */
+    order: 2; /* Pindahkan ke tengah */
+}
+
+.todo-section h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fafafa; /* font menjadi putih */
+    text-shadow: 2px 2px 2px #000000; /* outline hitam sebesar 2px */
+}
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-input input {
+    flex: 1;
+    padding: 5px;
+    color: #000000; /* font tetap hitam */
+}
+
+.todo-input button {
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+#todo-list {
+    list-style-type: none;
+}
+
+#todo-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #1a1d23; /* abu2 gelap */
+    transition: background-color 0.2s ease;
+    color: #fafafa; /* font menjadi putih */
+}
+
+#todo-list li:hover {
+    background-color: #1f2429; /* abu2 gelap */
+}
+
+#todo-list li:active {
+    background-color: #21252b; /* abu2 gelap */
+}
+
+#todo-list li {
+    position: relative;
+}
+
+#todo-list li button {
+    margin-left: auto;
+    padding: 1px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fafafa;
+}
+
+/* Item yang selesai (dicoret) */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Tombol checklist */
+/* Item di To-Do List */
+button i {
+    font-size: 1.2rem; /* Sesuaikan ukuran ikon */
+    pointer-events: none; /* Mencegah ikon menghalangi klik tombol */
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #1a1d23;
+    border-radius: 5px;
+}
+
+
+
+.todo-item:hover {
+    background-color: #1f2429; /* Warna saat hover */
+}
+
+/* Tombol checklist */
+.todo-checklist {
+    margin-right: 45px;
+    padding: 3px 8px;
+    font-size: 3rem; /* Ukuran ikon */
+    cursor: pointer;
+    border: none;
+    background: none; /* Hapus latar belakang */
+}
+.todo-checklist i {
+    color: #4caf50; /* Warna hijau untuk ikon checklist */
+}
+
+.todo-delete {
+    margin-right: 10px; /* Dorong tombol delete ke kanan */
+    padding: 3px 8px;
+    font-size: 3rem;
+    /* color: #ffffff; */
+    border: none;
+    background: none;
+}
+.todo-delete i {
+    color: #f44336; /* Warna merah untuk ikon delete */
+}
+
+.todo-checklist:hover {
+    background-color: #45a049;
+}
+
+.todo-delete:hover {
+    background-color: #f44336;
+}
+
+
+
+/* Time Section */
+.hidden {
+    display: none;
+}
+
+.waktu-habis {
+    position: fixed;
+    width: 300px;
+    height: auto;
+    background-color: #fafafa;
+    color: #000000;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.waktu-habis-left {
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
+.waktu-habis-right {
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+}
+
+
+
+/* Pomodoro Timer Section */
+.timer-section {
+    background-color: #0f131a; /* abu2 gelap */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* semua item berada di tengah */
+    justify-content: center;
+    height: auto;
+    order: 1; /* Pindahkan ke sebelah kiri */
+    color:#fafafa;
+}
+
+.timer {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px #0f131a; 
+}
+
+.timer-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.timer-controls select,
+.timer-controls input,
+.timer-controls button {
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+.timer-section img {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 10px;
+}
+
