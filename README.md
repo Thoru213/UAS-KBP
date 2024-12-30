@@ -1,6 +1,6 @@
 # UAS-KBP
 
-## Fitur Utama ⚙️
+## Fitur Utama 
 
 ### Pomodoro Timer 
 - Kelola waktu dengan teknik Pomodoro untuk meningkatkan produktivitas.
